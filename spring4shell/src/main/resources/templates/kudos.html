@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <title>Getting Started: Spring4Shell App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+</head>
+
+<body>
+    <article id="kudos">
+        <h1>Kudo Board</h1>
+        <form action="#" th:action="@{/kudos}" th:object="${kudos}" method="post">
+            <div class="grid">
+                <div>
+                    <label for="id">
+                        Give Kudos To <input type="text" th:field="*{id}" placeholder="ID" required>
+                    </label>
+                </div>
+                <div>
+                    <label for="message">
+                        Kudos Message <input type="text" th:field="*{content}" placeholder="Message" required>
+                    </label>
+                </div>
+            </div>
+            <div class="grid">
+                <div><button type="submit">Submit</button></div>
+                <div><button type="reset">Reset</button></div>
+            </div>
+        </form>
+    </article>
+</body>
+
+</html>

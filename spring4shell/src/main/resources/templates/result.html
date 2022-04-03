@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <title>Getting Started: Spring4Shell App</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+</head>
+
+<body>
+    <article id="result">
+        <h1>Thank You </h1>
+        Kudos sent To
+        <p th:text="'id: ' + ${kudos.id}" />
+        With Message
+        <p th:text="'content: ' + ${kudos.content}" />
+        <a th:href="@{/kudos}">Submit Another Kudos</a>
+    </article>
+</body>
+
+</html>
