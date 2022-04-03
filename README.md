@@ -10,13 +10,15 @@ Minimal example of how to reproduce CVE-2022-22965 Spring RCE.
     ```
     _Add `-p 5005:5005 -e "JAVA_OPTS=-Xdebug -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005"` if you want to debug remotely._
 
-4. Exploit the Application
+2. Vist the Kudo Board App from http://localhost:8080/spring4shell
+
+3. Exploit the Application
     ```shell
     exploits/run.sh 
     ```
     The exploit is going to create `rce.jsp` file in  `webapps/hacked` on the web server.
 
-5. Use the exploit
+4. Use the exploit
     ```shell
     curl http://localhost:8080/hacked/rce.jsp
     ```
