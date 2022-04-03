@@ -10,10 +10,14 @@
 <body>
     <article id="index">
         <h1>Welcome to Spring4Shell POC</h1>
-        <div class="grid">
-            <div><a th:href="@{/kudos}">Kudos App</a></div>
-            <div><a href="/manager">Admin UI</a></div>
-        </div>
+        <aside>
+            <nav>
+                <ul>
+                    <li><a th:href="@{/kudos}">Kudos App</a></li>
+                    <li><a href="/manager">Tomcat UI</a></li>
+                </ul>
+            </nav>
+        </aside>
     </article>
 </body>
 
