@@ -35,10 +35,10 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
           
     - name: Build the Docker Images
-      run: cd spring4shell && docker build . --file Dockerfile --tag spring4shell-tomcat:latest && cd -
+      run: cd spring4shell && docker build . --file Dockerfile --tag rajasoun/spring4shell-tomcat:latest && cd -
       
     - name: Push the Docker Images
-      run: docker push spring4shell-tomcat:latest 
+      run: docker push rajasoun/spring4shell-tomcat:latest
 
           
 
